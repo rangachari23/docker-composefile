@@ -1,0 +1,26 @@
+#apt-get instll docker-compose 
+To create docker compose 
+1st to make one directory
+#mkdir dockercompose.file
+#cd /dockercompose.file
+to edit dockercompose.file
+
+
+version: "2.2"
+services:
+  webserver:
+    image: nginx:latest
+    ports:
+       - "8080:80"
+    volumes:
+       - ./db-data:/usr/local/nginx/conf
+  redis:
+    image: redis
+  wq!
+
+To check docker file
+#docker-compose config
+And to start dockerfile
+#docker-compose up -d
+Now we have docker #docker ps
+#docker-compose -d 
